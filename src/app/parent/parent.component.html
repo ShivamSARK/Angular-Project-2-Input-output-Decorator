@@ -1,0 +1,55 @@
+<h3>Parent</h3>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 box">
+            <h3 class="text-success">User</h3>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>User Name:</th>
+                        <th class="text-danger">Remove</th>
+                    </tr>
+                </thead>
+                <tr *ngFor="let user of users; index as i" >
+                    <td>{{user}}</td>
+                    <td class="text-danger" (click)="onRemoveUser(i)"><i class="fa fa-trash" aria-hidden="true"></i></td>
+                </tr>
+            </table>
+
+
+        </div>
+        <div class="col-md-6 box">
+            <h3 class="text-success">Admin</h3>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Admin Name:</th>
+                        <th class="text-danger">Remove</th>
+                    </tr>
+                </thead>
+                <tr *ngFor="let admin of admins; index as i">
+                    <td>{{admin}}</td>
+                    <td class="text-danger" (click)="onRemoveAdmin(i)"><i class="fa fa-trash" aria-hidden="true"></i></td>
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<h3>Child</h3>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <app-child [boxColor]="'red'" [placeholderText]="'Create User'" 
+            (inputEvent)="pushUser($event)"></app-child>
+
+        </div>
+        <div class="col-md-6">
+            <app-child [boxColor]="'green'" [placeholderText]="'Create Admin'"
+            (inputEvent)="pushAdmin($event)"></app-child>
+            
+        </div>
+    </div>
+</div>

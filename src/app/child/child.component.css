@@ -1,0 +1,19 @@
+.box{
+    padding: 20px;
+    width: 100%;
+    
+}
+.boxRed{
+    border: 1px solid red;
+    box-shadow: 0px 0px 10px red;
+}
+
+.boxGreen{
+    border: 1px solid green;
+    box-shadow: 0px 0px 10px green;
+}
+
+.btn{
+    padding: 6px 18px;
+    text-align: center;
+}

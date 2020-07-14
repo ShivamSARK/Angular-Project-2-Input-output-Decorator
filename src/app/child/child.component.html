@@ -1,0 +1,8 @@
+<div class="box" [ngClass]="{boxRed:boxColor=='red', boxGreen:boxColor=='green'}">
+<div class=" form-group  text-center">
+    <input type="text"  #myInput class="form-control" placeholder="{{placeholderText}}">
+    <button (click)="onCreate(myInput)" class="btn btn-success mt-2">Create</button>
+   
+</div>
+<strong *ngIf="count>0">Total Count: {{count}}</strong>
+</div>
